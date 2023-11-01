@@ -1,0 +1,166 @@
+.ForthBlockWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  margin-bottom: 80px;
+}
+.ForthBlock {
+  position: relative;
+  min-height: 600px;
+  height: 600px;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 20px;
+  z-index: 2;
+  padding-top: 50px;
+}
+.ForthBlockTitleWrapper {
+  display: flex;
+  margin-bottom: 30px;
+  user-select: none;
+}
+.ForthBlockTitleWrapper p {
+  font-family: "Oswald";
+  font-size: 35px;
+  font-size: 500;
+  text-align: center;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+.ForthBlockTitleHighlight {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(
+    113deg,
+    rgba(255, 63, 62, 1) 20%,
+    rgba(40, 157, 248, 1) 100%
+  );
+}
+.HoldingPhone {
+  position: absolute;
+  bottom: -80px;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}
+.HoldingPhone img {
+  position: relative;
+  z-index: 2;
+  width: 750px;
+  pointer-events: none;
+}
+.Screenshot {
+  position: absolute;
+  z-index: 1;
+  bottom: 160px;
+  left: 270px;
+  transform: scaleY(0.95);
+}
+.Screenshot img {
+  width: 175px;
+  transform: rotate(-4.9deg);
+  border-radius: 20px;
+}
+.Contacts {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.ContactsItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.ContactsItemReverse {
+  flex-direction: row-reverse;
+  text-align: end;
+}
+.ContactsItemRight {
+  width: 50%;
+}
+.ContactsItemTitle {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 100%;
+  margin-bottom: 10px;
+}
+.ContactsItemContent {
+  font-size: 18px;
+  line-height: 110%;
+}
+.ContactsItemIcon {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 10px;
+  background-image: linear-gradient(
+    113deg,
+    rgba(255, 63, 62, 1) 20%,
+    rgba(40, 157, 248, 1) 100%
+  );
+}
+.ContactsItemIcon img {
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+}
+@media only screen and (max-width: 700px) {
+  .ForthBlockWrapper {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+  }
+  .ForthBlock {
+    min-height: inherit;
+    height: inherit;
+    max-height: inherit;
+  }
+  .HoldingPhone {
+    display: none;
+  }
+  .ContactsItemTitle {
+    line-height: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  .ContactsItemContent {
+    font-size: 12px;
+  }
+  .ContactsItemIcon img {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media only screen and (max-width: 880px) {
+  .ForthBlockWrapper {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+  }
+
+  .ContactsItemTitle {
+    line-height: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  .ContactsItemContent {
+    font-size: 12px;
+  }
+  .ContactsItemIcon img {
+    width: 30px;
+    height: 30px;
+  }
+}

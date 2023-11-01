@@ -1,0 +1,134 @@
+.HeaderWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #efefef;
+}
+.Header {
+  min-height: 100px;
+  height: 100px;
+  max-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 20px;
+}
+.Logo {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lalezar";
+  position: relative;
+}
+.LogoText {
+  font-size: 25px;
+  font-weight: 500;
+  user-select: none;
+}
+.LogoTextFirstWord {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 62, 62, 1) 0%,
+    rgba(191, 0, 0, 1) 100%
+  );
+}
+.LogoTextSecondWord {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(
+    0deg,
+    rgba(36, 163, 255, 1) 0%,
+    rgba(2, 80, 137, 1) 100%
+  );
+}
+.Location {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  top: 20px;
+  user-select: none;
+}
+.LocationText {
+  font-size: 22px;
+  max-height: 22px;
+}
+.Contacts {
+  display: flex;
+  align-items: center;
+}
+.SocialLinks {
+  display: flex;
+  align-items: center;
+}
+.SocialLinksItem {
+  color: black;
+  box-sizing: border-box;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  position: relative;
+}
+.SocialLinksItem::before {
+  content: "";
+  border-radius: 50%;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  z-index: -1;
+}
+.SocialLinksItem:hover {
+  filter: invert(1);
+  border: 2px solid white;
+  border-radius: 3px;
+}
+.SocialLinksItem svg {
+  height: 30px;
+  width: 30px;
+}
+.Cellphone {
+  font-size: 18px;
+  color: #3e3e3e;
+  font-family: "Monda";
+}
+@media only screen and (max-width: 880px) {
+  .Header {
+    padding: 10px;
+    max-height: 70px;
+    height: 70px;
+    min-height: 70px;
+    margin: 0 5px;
+  }
+  .LogoText {
+    font-size: 20px;
+  }
+  .Location svg {
+    width: 10px;
+    height: 10px;
+  }
+  .LocationText {
+    font-size: 15px;
+    max-height: 15px;
+  }
+  .Cellphone {
+    font-size: 15px;
+  }
+  .Contacts {
+    flex-direction: column-reverse;
+  }
+  .SocialLinksItem {
+    margin: 0 7px;
+  }
+  .SocialLinksItem svg {
+    height: 25px;
+    width: 25px;
+  }
+}

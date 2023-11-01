@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import MyHeader from "./components/MyHeader";
+import MainOffer from "./components/MainOffer";
+import SecondBlock from "./components/SecondBlock";
+import ThirdBlock from "./components/ThirdBlock";
+import ForthBlock from "./components/ForthBlock";
+import FifthBlock from "./components/FifthBlock";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MyHeader />
+      <MainOffer />
+      <SecondBlock />
+      <ThirdBlock />
+      <ForthBlock />
+      <FifthBlock />
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,76 @@
+.FooterWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #363636;
+  color: #e6e6e6;
+  font-family: "Lalezar";
+}
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 35px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 20px;
+}
+.Logo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+.Logo p {
+  font-size: 25px;
+  font-weight: 500;
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(
+    0deg,
+    rgb(213, 213, 213) 0%,
+    rgb(235, 235, 235) 100%
+  );
+}
+.Location {
+  display: flex;
+  align-items: flex-end;
+  top: 20px;
+  position: absolute;
+}
+.Location p {
+  font-size: 22px;
+  max-height: 22px;
+}
+.Innotec {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 15px;
+  user-select: none;
+}
+.Innotec p:nth-child(2) {
+  line-height: 50%;
+  margin-top: 7px;
+}
+@media only screen and (max-width: 880px) {
+  .Footer {
+    padding: 10px 10px 30px;
+    margin: 0 5px;
+  }
+  .Logo p {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .Location svg {
+    width: 10px;
+    height: 10px;
+  }
+  .Location p {
+    font-size: 15px;
+    max-height: 15px;
+  }
+  .Innotec {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,113 @@
+.ThirdBlockWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  user-select: none;
+}
+.ThirdBlock {
+  position: relative;
+  min-height: 600px;
+  height: 600px;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 20px;
+  z-index: 2;
+}
+.ThirdBlockTitleWrapper p {
+  font-family: "Oswald";
+  font-size: 35px;
+  font-size: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+.ThirdBlockTitleHighlight {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(
+    113deg,
+    rgba(255, 63, 62, 1) 20%,
+    rgba(40, 157, 248, 1) 100%
+  );
+}
+.Services {
+  display: flex;
+  align-items: center;
+}
+.ServicesItem {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+}
+.ServicesItemIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  padding: 25px 40px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  height: 100px;
+  margin: 35px 0;
+  cursor: pointer;
+}
+.ServicesItemIcon:active {
+  box-shadow: none;
+  transform: scale(0.99);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+}
+.ServicesItemIcon img {
+  width: 200px;
+  object-fit: contain;
+  pointer-events: none;
+}
+.ServicesItemDesc {
+  padding: 10px 15px;
+  margin: 0 15px;
+  border-radius: 20px;
+  background-color: #f4f4f4;
+  user-select: none;
+}
+.ServicesItemDescTitle {
+  font-size: 25px;
+  font-weight: 500;
+}
+.ServicesItemDescText {
+  font-size: 18px;
+  font-weight: 300;
+}
+@media only screen and (max-width: 880px) {
+  .ThirdBlockTitleWrapper {
+    margin: 30px 0 50px 0;
+  }
+  .ThirdBlock {
+    height: inherit;
+    max-height: inherit;
+    min-height: inherit;
+  }
+  .Services {
+    flex-direction: column;
+  }
+  .ServicesItem {
+    margin-bottom: 15px;
+  }
+  .ServicesItemIcon {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    height: 100px;
+    margin: 10px 0;
+  }
+  .ServicesItemDescTitle {
+    font-size: 20px;
+  }
+  .ServicesItemDescText {
+    font-size: 15px;
+  }
+}

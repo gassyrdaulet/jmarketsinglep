@@ -1,0 +1,272 @@
+.MainOfferWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+.MainOfferBackgroundText {
+  position: absolute;
+  color: #ececec;
+  z-index: 1;
+  font-family: "Oswald";
+  font-size: 45px;
+  max-width: 1000px;
+  font-weight: 600;
+  user-select: none;
+  margin: 0 20px;
+}
+.MainOffer {
+  position: relative;
+  min-height: 600px;
+  height: 600px;
+  max-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 20px;
+  z-index: 2;
+}
+.MainOfferFirstHalf {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 55%;
+}
+.MainOfferTitle {
+  position: relative;
+  font-size: 45px;
+  font-family: "Oswald";
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+.MainOfferTitleHighlight {
+  font-weight: 500;
+  font-size: 50px;
+}
+.MainOfferButton {
+  font-size: 30px;
+  font-weight: 500;
+  padding: 10px 25px;
+  text-decoration: none;
+}
+.Advantages {
+  display: flex;
+  margin-top: 50px;
+}
+.Advantages > * {
+  display: block;
+  border-radius: 24px;
+  padding: 20px;
+  max-height: 150px;
+}
+.AdvantagesItemFirst {
+  background-color: #c6d9e1;
+  margin-right: 15px;
+}
+.AdvantagesItemSecond {
+  background-color: #f4f4f4;
+}
+.AdvantagesItemTitle {
+  font-size: 24px;
+  font-weight: 600;
+}
+.AdvantagesItemDesc {
+  font-size: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  line-height: 110%;
+}
+.MainOfferSecondHalf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  overflow: hidden;
+  height: 100%;
+}
+.Slider {
+  display: flex;
+  align-items: center;
+}
+.SliderItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  animation: SliderItemChange 0.3s;
+}
+.SliderItemImage {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  object-fit: contain;
+  z-index: 2;
+  pointer-events: none;
+}
+.SliderItemBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+.SliderItemPrice {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  white-space: nowrap;
+  font-family: "Oswald";
+  font-weight: 600;
+  font-style: italic;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  z-index: 3;
+  padding: 10px 25px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 63, 62, 1) 0%,
+    rgba(40, 157, 248, 1) 100%
+  );
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
+  user-select: none;
+  border-radius: 50px;
+  bottom: -15px;
+}
+.SliderItemOldPrice {
+  font-size: 15px;
+  text-decoration: line-through;
+}
+.SliderItemNewPrice {
+  font-size: 25px;
+}
+.SliderPages {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+.SliderPagesItem {
+  width: 13px;
+  height: 13px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  margin: 0 2px;
+}
+.SliderPagesItemActive {
+  width: 15px;
+  height: 15px;
+  background-color: #565656;
+  border-radius: 50%;
+}
+@keyframes SliderItemChange {
+  0% {
+    filter: blur(10px);
+    transform: translateX(15px);
+  }
+  80% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+@media only screen and (max-width: 730px) {
+  .MainOfferTitle {
+    font-size: 40px;
+    margin: 20px 0;
+    line-height: 120%;
+  }
+  .MainOfferTitleHighlight {
+    font-size: 45px;
+  }
+  .MainOfferBackgroundText {
+    font-size: 20px;
+    margin: 0 5px;
+  }
+  .MainOffer {
+    height: inherit;
+    max-height: inherit;
+    min-height: inherit;
+    margin: 0 5px;
+    flex-direction: column-reverse;
+    padding-bottom: 50px;
+  }
+  .MainOfferFirstHalf {
+    align-items: center;
+    width: inherit;
+  }
+  .MainOfferSecondHalf {
+    width: inherit;
+    padding-top: 10px;
+  }
+  .MainOfferButton {
+    font-size: 30px;
+    margin: 20px 0 30px;
+  }
+  .Advantages {
+    margin-top: 10px;
+  }
+  .AdvantagesItemTitle {
+    font-size: 15px;
+  }
+  .AdvantagesItemDesc {
+    font-size: 12px;
+  }
+  .SliderItem {
+    width: 250px;
+    height: 250px;
+  }
+  .SliderItemImage {
+    height: 250px;
+    width: 250px;
+  }
+  .SliderItemNewPrice {
+    font-size: 15px;
+  }
+  .SliderItemOldPrice {
+    font-size: 10px;
+  }
+  .SliderPagesItem {
+    height: 7px;
+    width: 7px;
+  }
+  .SliderPagesItemActive {
+    height: 9px;
+    width: 9px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .SliderItem {
+    width: 345px;
+    height: 345px;
+  }
+  .SliderItemImage {
+    height: 400px;
+    width: 400px;
+  }
+  .SliderItemNewPrice {
+    font-size: 35px;
+  }
+  .SliderItemOldPrice {
+    font-size: 18px;
+  }
+  .SliderPagesItem {
+    height: 13px;
+    width: 13px;
+  }
+  .SliderPagesItemActive {
+    height: 15px;
+    width: 15px;
+  }
+}
