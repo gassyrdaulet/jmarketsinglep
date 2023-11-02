@@ -1,11 +1,10 @@
 import cl from "./FifthBlock.module.css";
-import config from "../config/config.json";
 import { useMemo, useState } from "react";
 import { FaStar } from "react-icons/fa6";
 import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
 import MyButton from "./MyButton";
 
-const { SERVER_IMAGES_URL } = config;
+const images_path = `${process.env.PUBLIC_URL}/assets/images/`;
 
 function FifthBlock() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -115,7 +114,7 @@ function FifthBlock() {
                   }
                 >
                   <img
-                    src={SERVER_IMAGES_URL + "frame.png"}
+                    src={images_path + "frame.png"}
                     alt="Рамка для отзыва."
                   />
                   <div className={cl.FeedbacksItemSource}>

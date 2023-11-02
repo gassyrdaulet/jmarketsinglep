@@ -1,9 +1,8 @@
 import cl from "./ThirdBlock.module.css";
 import { useMemo } from "react";
-import config from "../config/config.json";
 import { motion } from "framer-motion";
 
-const { SERVER_IMAGES_URL } = config;
+const images_path = `${process.env.PUBLIC_URL}/assets/images/`;
 
 const thirdBlockTitleAnimation = {
   hidden: {
@@ -31,7 +30,7 @@ function ThirdBlock() {
     () => [
       {
         id: 0,
-        img: SERVER_IMAGES_URL + "insta_logo.png",
+        img: images_path + "insta_logo.png",
         name: "Instagram",
         href: "https://instagram.com/jack_market_kz?igshid=OGQ5ZDc2ODk2ZA==",
         title: "Присоединяйтесь к нашей страничке",
@@ -39,7 +38,7 @@ function ThirdBlock() {
       },
       {
         id: 1,
-        img: SERVER_IMAGES_URL + "kaspi_logo.png",
+        img: images_path + "kaspi_logo.png",
         name: "Kaspi",
         href: "https://kaspi.kz/shop/info/merchant/1037010/address-tab/",
         title: "Удобно и выгодно в нашем магазине на Kaspi.kz",
@@ -47,7 +46,7 @@ function ThirdBlock() {
       },
       {
         id: 2,
-        img: SERVER_IMAGES_URL + "whatsapp_logo.png",
+        img: images_path + "whatsapp_logo.png",
         name: "Whatsapp",
         href: "https://wa.me/+77021963800?text=Здравствуйте! Не могли бы Вы мне, пожалуйста, помочь?",
         title: "Мы всегда рядом в WhatsApp!",

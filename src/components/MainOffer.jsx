@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import cl from "./MainOffer.module.css";
 import { MButton } from "./MyButton";
 import { useMemo } from "react";
-import config from "../config/config.json";
 import { motion } from "framer-motion";
-const { SERVER_IMAGES_URL } = config;
+
+const images_path = `${process.env.PUBLIC_URL}/assets/images/`;
 
 const textAnimation = {
   hidden: {
@@ -182,7 +182,7 @@ function MainOffer() {
                     ></div>
                     <img
                       className={cl.SliderItemImage}
-                      src={SERVER_IMAGES_URL + good.url}
+                      src={images_path + good.url}
                       alt={good.alt}
                     />
                     <div className={cl.SliderItemPrice}>

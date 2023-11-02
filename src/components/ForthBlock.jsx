@@ -1,10 +1,9 @@
 import cl from "./ForthBlock.module.css";
-import config from "../config/config.json";
 import { useMemo } from "react";
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa6";
 
-const { SERVER_IMAGES_URL } = config;
+const images_path = `${process.env.PUBLIC_URL}/assets/images/`;
 
 const contactsItemAnimation = {
   hidden: {
@@ -143,7 +142,7 @@ function ForthBlock() {
                       variants={contactsItemAnimation}
                       className={cl.ContactsItemIcon}
                     >
-                      <img src={SERVER_IMAGES_URL + item.img} alt={item.name} />
+                      <img src={images_path + item.img} alt={item.name} />
                     </motion.a>
                   </div>
                   <motion.div
@@ -183,7 +182,7 @@ function ForthBlock() {
                       variants={contactsItemAnimation}
                       className={cl.ContactsItemIcon}
                     >
-                      <img src={SERVER_IMAGES_URL + item.img} alt={item.name} />
+                      <img src={images_path + item.img} alt={item.name} />
                     </motion.a>
                   </div>
                   <motion.div
@@ -201,10 +200,10 @@ function ForthBlock() {
         </div>
       </div>
       <motion.div variants={holdingPhoneAnimation} className={cl.HoldingPhone}>
-        <img src={SERVER_IMAGES_URL + "hand.png"} alt="Рука держит телефон." />
+        <img src={images_path + "hand.png"} alt="Рука держит телефон." />
         <div className={cl.Screenshot}>
           <img
-            src={SERVER_IMAGES_URL + "screenshot.jpg"}
+            src={images_path + "screenshot.jpg"}
             alt="Наше местоположение на телефоне в приложении 2ГИС."
           />
         </div>

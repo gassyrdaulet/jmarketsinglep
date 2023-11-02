@@ -7,6 +7,8 @@ import ForthBlock from "./components/ForthBlock";
 import FifthBlock from "./components/FifthBlock";
 import Footer from "./components/Footer";
 
+// ("scp -r ./build/* /var/www/jackmarket.kz/html");
+
 function App() {
   return (
     <div className="App">

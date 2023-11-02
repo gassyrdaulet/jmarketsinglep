@@ -1,8 +1,8 @@
 import cl from "./SecondBlock.module.css";
-import config from "../config/config.json";
 import { motion } from "framer-motion";
-
-const { SERVER_IMAGES_URL } = config;
+import scooter from "../img/scooter.png";
+import baiterek from "../img/astana.jpg";
+import flag from "../img/flag.jpg";
 
 const scooterAnimation = {
   hidden: {
@@ -40,7 +40,7 @@ function SecondBlock() {
           <div className={cl.SecondBlockImgWrapper}>
             <img
               className={cl.SecondBlockImg}
-              src={SERVER_IMAGES_URL + "astana.jpg"}
+              src={baiterek}
               alt="Казахстан, г. Астана на карте."
             />
           </div>
@@ -68,17 +68,14 @@ function SecondBlock() {
           <div className={cl.SecondBlockImgWrapper}>
             <img
               className={cl.SecondBlockImg}
-              src={SERVER_IMAGES_URL + "flag.jpg"}
+              src={flag}
               alt="Флаг Казахстана."
             />
           </div>
         </div>
       </motion.div>
       <motion.div custom={1} variants={scooterAnimation} className={cl.Scooter}>
-        <img
-          src={SERVER_IMAGES_URL + "scooter.png"}
-          alt="Скутер для доставок!"
-        />
+        <img src={scooter} alt="Скутер для доставок!" />
       </motion.div>
     </motion.div>
   );
