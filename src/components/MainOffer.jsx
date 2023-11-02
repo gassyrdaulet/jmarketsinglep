@@ -183,6 +183,10 @@ function MainOffer() {
                     <img
                       className={cl.SliderItemImage}
                       src={images_path + good.url}
+                      srcset={`${images_path + "small_" + good.url} 320w,${
+                        images_path + good.url
+                      } 1200w`}
+                      sizes={`(max-width: 320px) 280px, (max-width: 768px) 720px`}
                       alt={good.alt}
                     />
                     <div className={cl.SliderItemPrice}>
