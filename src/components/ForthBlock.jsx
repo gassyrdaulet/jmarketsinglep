@@ -2,6 +2,7 @@ import cl from "./ForthBlock.module.css";
 import config from "../config/config.json";
 import { useMemo } from "react";
 import { motion } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa6";
 
 const { SERVER_IMAGES_URL } = config;
 
@@ -55,24 +56,33 @@ function ForthBlock() {
     () => [
       {
         id: 0,
-        name: "Номер телефона(1)",
+        name: "Номер телефона",
         content: "+7 707 332 93 42",
         href: "tel://+77073329342",
+        icon: <FaWhatsapp />,
         img: "cellphoneicon.png",
+        hrefforicon:
+          "https://wa.me/+77073329342?text=Здравствуйте! Я нашел пишу из Вашего сайта.",
       },
       {
+        icon: <FaWhatsapp />,
         id: 1,
-        name: "Номер телефона(2)",
+        name: "Номер телефона",
         href: "tel://+7 775 818 13 25",
-        content: "+77758181325",
+        content: "+7 775 818 13 25",
         img: "cellphoneicon.png",
+        hrefforicon:
+          "https://wa.me/+77758181325?text=Здравствуйте! Я нашел пишу из Вашего сайта.",
       },
       {
         id: 2,
-        name: "WhatsApp",
+        icon: <FaWhatsapp />,
+        name: "Номер телефона",
         content: "+7 702 196 38 00",
         href: "https://wa.me/+77021963800?text=Здравствуйте! Я нашел пишу из Вашего сайта.",
-        img: "whatsappicon.png",
+        img: "cellphoneicon.png",
+        hrefforicon:
+          "https://wa.me/+77021963800?text=Здравствуйте! Я нашел пишу из Вашего сайта.",
       },
     ],
     []
@@ -142,8 +152,16 @@ function ForthBlock() {
                     className={cl.ContactsItemRight}
                   >
                     <p className={cl.ContactsItemTitle}>{item.name}</p>
-                    <p className={cl.ContactsItemContent}>{item.content}</p>
-                    <p></p>
+                    <div className={cl.ContactsItemContentWrapper}>
+                      <p className={cl.ContactsItemContent}>{item.content}</p>
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href={item.hrefforicon}
+                      >
+                        {item.icon}
+                      </a>
+                    </div>
                   </motion.div>
                 </div>
               );
@@ -175,7 +193,6 @@ function ForthBlock() {
                   >
                     <p className={cl.ContactsItemTitle}>{item.name}</p>
                     <p className={cl.ContactsItemContent}>{item.content}</p>
-                    <p></p>
                   </motion.div>
                 </div>
               );

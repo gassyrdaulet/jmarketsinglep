@@ -78,15 +78,16 @@
 }
 .ContactsItem {
   display: flex;
-  align-items: center;
   margin-bottom: 30px;
+  height: 100px;
+}
+.contactsFirstColumn,
+.contactsSecondColumn {
+  width: 35%;
 }
 .ContactsItemReverse {
   flex-direction: row-reverse;
   text-align: end;
-}
-.ContactsItemRight {
-  width: 50%;
 }
 .ContactsItemTitle {
   font-size: 22px;
@@ -94,8 +95,23 @@
   line-height: 100%;
   margin-bottom: 10px;
 }
+.ContactsItemContentWrapper {
+  display: flex;
+  align-items: center;
+}
+.ContactsItemContentWrapper a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+.ContactsItemContentWrapper svg {
+  margin-left: 10px;
+  height: 20px;
+  width: 20px;
+}
 .ContactsItemContent {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 110%;
 }
 .ContactsItemIcon {
@@ -136,8 +152,11 @@
     margin-bottom: 10px;
     font-size: 18px;
   }
+  .ContactsItemContentWrapper svg {
+    margin-left: 5px;
+  }
   .ContactsItemContent {
-    font-size: 12px;
+    font-size: 15px;
   }
   .ContactsItemIcon img {
     width: 30px;
@@ -150,17 +169,20 @@
     padding-bottom: 0;
     overflow: hidden;
   }
-
   .ContactsItemTitle {
     line-height: 100%;
     margin-bottom: 10px;
     font-size: 18px;
   }
   .ContactsItemContent {
-    font-size: 12px;
+    font-size: 14px;
   }
   .ContactsItemIcon img {
     width: 30px;
     height: 30px;
+  }
+  .contactsFirstColumn,
+  .contactsSecondColumn {
+    width: 40%;
   }
 }
